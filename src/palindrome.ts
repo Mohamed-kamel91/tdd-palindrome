@@ -1,19 +1,18 @@
 export class PalindromeChecker {
+  private static normalizeString(str: string): string {
+    return str.toLowerCase().replace(/\s+/g, "");
+  }
+
+  private static reverseString(str: string): string {
+    return str.split("").reverse().join("");
+  }
+
   static isPalindrome(str: string) {
     if (str === "") return true;
 
-    return (
-      str
-        .toLowerCase()
-        .split("")
-        .filter((t) => t !== " ")
-        .reverse()
-        .join("") ===
-      str
-        .toLowerCase()
-        .split("")
-        .filter((t) => t !== " ")
-        .join("")
-    );
+    const normalized = this.normalizeString(str);
+    const reversed = this.reverseString(normalized);
+
+    return normalized === reversed;
   }
 }
