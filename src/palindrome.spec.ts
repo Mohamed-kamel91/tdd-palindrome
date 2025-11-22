@@ -24,6 +24,12 @@ describe("Palindrome checker", () => {
   );
 
   it("knows that empty string is palindrome", () => {
-     expect(PalindromeChecker.isPalindrome("")).toBe(true);
-  })
+    expect(PalindromeChecker.isPalindrome("")).toBe(true);
+  });
+
+  it("ignores punctuation in a palindrome phrase", () => {
+    expect(
+      PalindromeChecker.isPalindrome("A man, a plan, a canal: Panama")
+    ).toBe(true);
+  });
 });

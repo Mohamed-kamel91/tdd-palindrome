@@ -1,6 +1,6 @@
 export class PalindromeChecker {
   private static normalizeString(str: string): string {
-    return str.toLowerCase().replace(/\s+/g, "");
+    return str.toLowerCase().replace(/[^a-z0-9]/g, "");
   }
 
   private static reverseString(str: string): string {
