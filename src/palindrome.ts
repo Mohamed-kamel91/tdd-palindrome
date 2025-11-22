@@ -15,4 +15,23 @@ export class PalindromeChecker {
 
     return normalized === reversed;
   }
+
+  // Solution (performance): large strings
+  // static isPalindrome(str: string): boolean {
+  //   if (str === "") return true;
+
+  //   const normalized = str.toLowerCase().replace(/\s+/g, "");
+  //   let left = 0;
+  //   let right = normalized.length - 1;
+
+  //   while (left < right) {
+  //     if (normalized[left] !== normalized[right]) {
+  //       return false;
+  //     }
+  //     left++;
+  //     right--;
+  //   }
+
+  //   return true;
+  // }
 }
