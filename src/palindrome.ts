@@ -1,5 +1,5 @@
 export class PalindromeChecker {
   static isPalindrome(str: string) {
-    return true;
+    return str.split("").reverse().join("") === str;
   }
 }
