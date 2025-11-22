@@ -8,4 +8,8 @@ describe("Palindrome checker", () => {
   it("knows that 'bill' is not palindrome", () => {
     expect(PalindromeChecker.isPalindrome("bill")).toBe(false);
   });
+
+  it("knows off case palindromes such as 'Mom'", () => {
+    expect(PalindromeChecker.isPalindrome("Mom")).toBe(true)
+  });
 });
