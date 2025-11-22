@@ -1,5 +1,7 @@
 export class PalindromeChecker {
   static isPalindrome(str: string) {
+    if (str === "") return true;
+
     return (
       str
         .toLowerCase()

@@ -22,4 +22,8 @@ describe("Palindrome checker", () => {
       expect(PalindromeChecker.isPalindrome(str)).toBe(true);
     }
   );
+
+  it("knows that empty string is palindrome", () => {
+     expect(PalindromeChecker.isPalindrome("")).toBe(true);
+  })
 });
