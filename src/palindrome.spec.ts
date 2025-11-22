@@ -10,6 +10,14 @@ describe("Palindrome checker", () => {
   });
 
   it("knows off case palindromes such as 'Mom'", () => {
-    expect(PalindromeChecker.isPalindrome("Mom")).toBe(true)
+    expect(PalindromeChecker.isPalindrome("Mom")).toBe(true);
+  });
+
+  it("knows that 'Was It A Rat I Saw' is a palindrome", () => {
+    expect(PalindromeChecker.isPalindrome("Was It A Rat I Saw")).toBe(true);
+  });
+
+  it('should be able to tell that "Never Odd or Even" is palindrome', () => {
+    expect(PalindromeChecker.isPalindrome("Never Odd or Even")).toBe(true);
   });
 });
